@@ -1,0 +1,311 @@
+/* frontend/src/pages/CreateProjectPage.css */
+.create-project-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .create-project-container h1 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  
+  .create-project-form {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .form-section {
+    padding: 30px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .form-section:last-child {
+    border-bottom: none;
+  }
+  
+  .form-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5rem;
+  }
+  
+  .section-hint {
+    margin-top: -15px;
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 0.95rem;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .form-group input[type="text"],
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .form-group input[type="text"]:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+  }
+  
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .checkbox-label input {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+  }
+  
+  .field-hint {
+    margin-top: 5px;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .file-input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .file-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  .file-input-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .file-input-label:hover {
+    background-color: #43a047;
+  }
+  
+  .file-name {
+    margin-left: 15px;
+    color: #666;
+  }
+  
+  .image-preview-container {
+    margin-top: 15px;
+    max-width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-preview {
+    display: block;
+    max-width: 100%;
+    max-height: 300px;
+    margin: 0 auto;
+  }
+  
+  .image-gallery-previews {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+/* frontend/src/pages/CreateProjectPage.css (продолжение) */
+.gallery-image-container {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery-image {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .remove-image-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .remove-image-btn:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+  }
+  
+  .image-caption-input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+  }
+  
+  .task-preview {
+    margin-top: 20px;
+  }
+  
+  .task-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    border-left: 4px solid #4caf50;
+  }
+  
+  .task-description {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .restrictions-list h4 {
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+  
+  .restriction-group {
+    margin-bottom: 10px;
+  }
+  
+  .restriction-group p {
+    margin: 5px 0;
+  }
+  
+  .restriction-group ul {
+    margin: 5px 0;
+    padding-left: 20px;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 30px;
+    background-color: #f9f9f9;
+    gap: 15px;
+  }
+  
+  .cancel-btn,
+  .submit-btn {
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .cancel-btn {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .submit-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+  }
+  
+  .submit-btn:hover {
+    background-color: #43a047;
+  }
+  
+  .submit-btn:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffebee;
+    color: #c62828;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .create-project-container h1 {
+      font-size: 1.8rem;
+    }
+    
+    .form-section {
+      padding: 20px;
+    }
+    
+    .image-gallery-previews {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .form-actions {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .cancel-btn, .submit-btn {
+      width: 100%;
+    }
+  }

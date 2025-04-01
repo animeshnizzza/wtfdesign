@@ -1,0 +1,115 @@
+/* frontend/src/components/admin/AdminLayout.css */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .admin-sidebar {
+    width: 250px;
+    background-color: #1a2635;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  
+  .admin-logo {
+    padding: 0 20px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .admin-logo h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #4caf50;
+  }
+  
+  .admin-logo p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+  
+  .admin-nav {
+    flex: 1;
+  }
+  
+  .admin-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .admin-nav li {
+    margin-bottom: 5px;
+  }
+  
+  .admin-nav a {
+    display: block;
+    padding: 12px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+  }
+  
+  .admin-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left-color: #4caf50;
+  }
+  
+  .admin-nav a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left-color: #4caf50;
+    font-weight: 600;
+  }
+  
+  .admin-footer {
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+  }
+  
+  .logout-btn,
+  .view-site-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: inherit;
+    font-size: 0.9rem;
+  }
+  
+  .logout-btn {
+    background-color: transparent;
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+  }
+  
+  .logout-btn:hover {
+    background-color: rgba(231, 76, 60, 0.1);
+  }
+  
+  .view-site-btn {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .view-site-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .admin-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #f5f5f5;
+    overflow-y: auto;
+  }

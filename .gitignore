@@ -1,0 +1,10 @@
+# Системные файлы
+.DS_Store
+._*
+
+# Зависимости
+node_modules/
+
+# Environment
+.env
+.env.local

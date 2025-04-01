@@ -1,0 +1,56 @@
+.admin-dashboard h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .admin-dashboard p {
+    margin-bottom: 30px;
+    color: #666;
+  }
+  
+  .dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .dashboard-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-card h3 {
+    margin-top: 0;
+    color: #4caf50;
+    font-size: 1.3rem;
+  }
+  
+  .dashboard-card p {
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  .card-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+  }
+  
+  .card-link:hover {
+    background-color: #43a047;
+  }

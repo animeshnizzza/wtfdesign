@@ -1,0 +1,488 @@
+/* frontend/src/pages/ProjectDetailPage.css */
+.project-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .project-header {
+    margin-bottom: 30px;
+  }
+  
+  .project-title {
+    font-size: 2.5rem;
+    margin: 0 0 20px;
+    color: #333;
+  }
+  
+  .project-creator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .creator-link {
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+  }
+  
+/* frontend/src/pages/ProjectDetailPage.css (продолжение) */
+.creator-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+  }
+  
+  .creator-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  
+  .project-meta {
+    display: flex;
+    gap: 20px;
+    color: #666;
+  }
+  
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .project-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .action-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .like-button {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .like-button.active {
+    background-color: #ffebee;
+    color: #e53935;
+  }
+  
+  .like-button:hover {
+    background-color: #ffe6e6;
+  }
+  
+  .save-button {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .save-button.active {
+    background-color: #e8f5e9;
+    color: #43a047;
+  }
+  
+  .save-button:hover {
+    background-color: #e0f2e1;
+  }
+  
+  .project-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .project-gallery {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-image-container {
+    width: 100%;
+    padding-top: 75%;
+    position: relative;
+    background-color: #f5f5f5;
+  }
+  
+  .main-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .thumbnails {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 15px;
+    background-color: #f5f5f5;
+  }
+  
+  .thumbnail {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+  }
+  
+  .thumbnail.active {
+    border-color: #4caf50;
+  }
+  
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .project-description h2,
+  .project-task h2,
+  .project-tags h2,
+  .project-tools h2,
+  .project-appreciations h2,
+  .project-comments h2 {
+    font-size: 1.5rem;
+    margin: 0 0 15px;
+    color: #333;
+  }
+  
+  .project-description p {
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .task-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    border-left: 4px solid #4caf50;
+  }
+  
+  .task-description {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .restrictions-list h4 {
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+  
+  .restriction-group {
+    margin-bottom: 10px;
+  }
+  
+  .restriction-group p {
+    margin: 5px 0;
+  }
+  
+  .restriction-group ul {
+    margin: 5px 0;
+    padding-left: 20px;
+  }
+  
+  .tags-list, .tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tag {
+    background-color: #e8f5e9;
+    color: #4caf50;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .tag:hover {
+    background-color: #c8e6c9;
+  }
+  
+  .tool {
+    background-color: #f5f5f5;
+    color: #666;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .appreciation-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .appreciation-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    gap: 5px;
+  }
+  
+  .appreciation-button i {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .appreciation-button .count {
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+  
+  .appreciation-button.active {
+    background-color: #e8f5e9;
+    color: #4caf50;
+  }
+  
+  .appreciation-button:hover {
+    background-color: #e8f5e9;
+  }
+  
+  .project-comments {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .comment-form {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .comment-form textarea {
+    height: 100px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+  }
+  
+  .comment-form button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .comment-form button:hover:not(:disabled) {
+    background-color: #43a047;
+  }
+  
+  .comment-form button:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
+  }
+  
+  .login-prompt {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+  
+  .login-prompt p {
+    margin: 0 0 15px;
+    color: #666;
+  }
+  
+  .login-link {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .login-link:hover {
+    background-color: #43a047;
+  }
+  
+  .comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .no-comments {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .comment {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+  }
+  
+  .comment:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .comment-author {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .author-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+  }
+  
+  .author-name {
+    font-weight: 600;
+  }
+  
+  .comment-date {
+    color: #999;
+    font-size: 0.9rem;
+  }
+  
+  .comment-text {
+    margin: 0;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  .loading-container,
+  .error-container {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .loading-spinner {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .error-message {
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    background-color: #ffebee;
+    color: #c62828;
+    border-radius: 8px;
+  }
+  
+  .back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .back-link:hover {
+    background-color: #e0e0e0;
+  }
+  
+  @media (max-width: 992px) {
+    .project-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .project-gallery {
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .project-title {
+      font-size: 2rem;
+    }
+    
+    .project-creator {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .project-meta {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .project-actions {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .appreciation-buttons {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
